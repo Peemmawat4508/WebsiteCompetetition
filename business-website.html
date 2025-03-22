@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ค้นพบพลังที่แท้จริงในข้อมูลของคุณกับ Ensome บริการโซลูชันด้านข้อมูลธุรกิจที่มีคุณภาพและเชื่อถือได้">
+    <title>Ensome - โซลูชันด้านข้อมูลธุรกิจ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        
+        /* ====================
+   1. Variables & Reset
+==================== */
+:root {
+    --primary-color: #185cff;
+    --secondary-color: #f1f6fa;
+    --dark-color: #292d33;
+    --light-color: #f8f9fc;
+    --white-color: #ffffff;
+    --border-color: #eaeaea;
+    --text-color: #9497a1;
+    --heading-color: #292d33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+/* ====================
+   2. Layout & Common Elements
+==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Buttons */
+.button-primary, .learn-more-btn, .cta-button, .send-button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary:hover, .learn-more-btn:hover, .cta-button:hover, .send-button:hover {
+    background-color: #0044cc;
+}
+
+.button-secondary {
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark-color);
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+}
+
+.button-secondary:hover {
+    color: var(--primary-color);
+}
+
+.button-secondary i {
+    color: var(--primary-color);
+}
+
+/* Section Headers */
+.section-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: var(--text-color);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ====================
+   3. Header & Navigation
+==================== */
+header {
+    background-color: var(--white-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.logo-text {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+    margin-right: 8px;
+}
+
+nav ul {
+    display: flex;
+   list-style: none;
+   gap: 60px; /* หรือ */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+    display: block;
+    padding: 10px 0;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+}
+
+.cta-button i {
+    font-size: 0.9rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ====================
+   4. Hero Section
+==================== */
+.hero {
+    padding: 160px 0 80px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+/* ====================
+   5. Client Logos
+==================== */
+.client-logos {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    opacity: 0.6;
+}
+
+.client-logo {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+/* ====================
+   6. Why Choose Us Section
+==================== */
+.why-choose-us {
+    padding: 100px 0;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: var(--white-color);
+    border-radius: 6px;
+    padding: 40px 30px;
+    text-align: left;
+}
+
+.feature-icon {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ====================
+   7. Analytics Platform Section
+==================== */
+.analytics-platform {
+    padding: 100px 0;
+    background-color: var(--white-color);
+}
+
+.platform-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.platform-content {
+    flex: 1;
+}
+
+.platform-image {
+    flex: 1;
+    text-align: right;
+}
+
+.platform-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.platform-content h2 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.platform-content p {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ====================
+   8. Data Solutions Section
+==================== */
+.data-solutions {
+    padding: 100px 0;
+    background-color: var(--white-color);
+}
+
+.solutions-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.solutions-content {
+    flex: 1;
+}
+
+.solutions-image {
+    flex: 1;
+}
+
+.solutions-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.solutions-content h2 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.solutions-content p {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ====================
+   9. Blog Section
+==================== */
+.blog-section {
+    padding: 100px 0;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.blog-header {
+    margin-bottom: 50px;
+}
+
+.blog-header h2 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.blog-card {
+    background-color: var(--white-color);
+    border-radius: 6px;
+    padding: 30px;
+    text-align: left;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.blog-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.blog-text {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 15px;
+}
+
+.blog-tag {
+    font-size: 0.8rem;
+    color: var(--heading-color);
+    background-color: transparent;
+    padding: 5px 0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.blog-tag:hover {
+    color: var(--primary-color);
+}
+
+.blog-button {
+    margin-top: 30px;
+}
+
+/* ====================
+   10. Testimonials Section
+==================== */
+.testimonials-section {
+    padding: 100px 0;
+    background-color: var(--white-color);
+}
+
+.testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.testimonials-header h2 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.testimonial-navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #e5eef7;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--white-color);
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+.testimonial-text {
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.author-info p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* ====================
+   11. Stats Section
+==================== */
+.stats-section {
+    padding: 60px 0;
+    background-color: var(--primary-color);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.stat-item {
+    padding: 20px;
+    color: white;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* ====================
+   12. Contact Section
+==================== */
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    background-color: var(--light-color);
+}
+
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.contact-info p {
+    color: var(--text-color);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    margin-top: 40px;
+}
+
+.detail-item {
+    margin-bottom: 25px;
+}
+
+.detail-label {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    display: block;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.contact-form-container {
+    flex: 1;
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-container h3 {
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.send-button {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    margin-left: auto;
+}
+
+/* ====================
+   13. Newsletter Section
+==================== */
+.newsletter-section {
+    background-color: var(--primary-color);
+    padding: 60px 0;
+    color: white;
+}
+
+.newsletter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.newsletter-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.newsletter-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.newsletter-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.newsletter-form form {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter-form input:focus {
+    outline: none;
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    background-color: white;
+    color: var(--dark-color);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #f5f5f5;
+}
+
+/* ====================
+   14. Footer Section
+==================== */
+.footer-section {
+    background-color: var(--light-color);
+    padding: 60px 0 30px;
+    color: var(--dark-color);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-nav-column h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.footer-nav-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-nav-column ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-nav-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 30px 0;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.contact-info h4,
+.social-links h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+.with-arrow::after {
+    content: "→";
+    margin-left: 5px;
+    transition: margin-left 0.3s;
+}
+
+.with-arrow:hover::after {
+    margin-left: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e8ecf4;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.8rem;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* ====================
+   15. Responsive Design
+==================== */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-nav {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+    
+    /* สไตล์สำหรับ nav.active จะแสดงเมนูบนมือถือเมื่อกดปุ่ม */
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--white-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    
+    nav.active ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 120px 0 60px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .platform-container,
+    .solutions-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .platform-content,
+    .solutions-content {
+        order: 1;
+    }
+    
+    .platform-image,
+    .solutions-image {
+        order: 2;
+    }
+    
+    .blog-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-top,
+    .footer-middle,
+    .footer-bottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+    
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 40px 20px;
+    }
+    
+    .footer-nav-column {
+        flex: 1;
+        min-width: 140px;
+    }
+    
+    .social-links {
+        margin-top: 20px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .contact-container,
+    .newsletter-container {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        padding-right: 0;
+    }
+    
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+    
+    .newsletter-content {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-nav-column {
+        width: 100%;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- ส่วนหัว -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="left-section">
+                    <a href="#" class="logo">
+                        <img src="ImageWebsite/Logov3.png" alt="Ensome Logo" class="logo-image" width="40" height="40">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="business-website.html">Home</a></li>
+                        <li><a href="Solution.html">Solutions</a></li>
+                        <li><a href="Elements.html">Elements</a></li>
+                    </ul>
+                </nav>
+                <div class="right-section">
+                    <a href="#" class="cta-button">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Watch the demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find true power in your data with Ensome</h1>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="button-primary">Learn more</a>
+                    <a href="#" class="button-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Watch the demo</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="ImageWebsite/Data Analytics Illustration.png" alt="Data Analytics Illustration" style="width: 750px; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="client-logos">
+        <div class="container">
+            <div class="logos-container">
+                <img src="ImageWebsite/logoWebsite/a1.png" alt="Client Logo 1" class="client-logo">
+                <img src="ImageWebsite/logoWebsite/a2.png" alt="Client Logo 2" class="client-logo">
+                <img src="ImageWebsite/logoWebsite/a3.png" alt="Client Logo 3" class="client-logo">
+                <img src="ImageWebsite/logoWebsite/a4.png" alt="Client Logo 4" class="client-logo">
+                <img src="ImageWebsite/logoWebsite/a5.png" alt="Client Logo 5" class="client-logo">
+                <img src="ImageWebsite/logoWebsite/a6.png" alt="Client Logo 6" class="client-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+<section class="why-choose-us">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why our clients choose Ensome?</h2>
+            <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="ImageWebsite/WhyChooseUsImage/Machine Learning Icon.png" alt="Machine Learning Icon" width="40" height="40">
+                </div>
+                <h3>Machine learning</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="ImageWebsite/WhyChooseUsImage/Analytics Icon.png" alt="Analytics Icon" width="40" height="40">
+                </div>
+                <h3>Embed analytics</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="ImageWebsite/WhyChooseUsImage/Access Control Icon.png" alt="Access Control Icon" width="40" height="40">
+                </div>
+                <h3>Access control</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Newest Analytics Platform Section -->
+    <section class="analytics-platform">
+        <div class="container">
+            <div class="platform-container">
+                <div class="platform-content">
+                    <h2>The newest business analytics platform</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <a href="#" class="learn-more-btn">Learn more</a>
+                </div>
+                <div class="platform-image">
+                    <img src="ImageWebsite/Analytics Platform.png" alt="Analytics Platform">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Solutions Section -->
+<section class="data-solutions">
+    <div class="container">
+        <div class="solutions-container">
+            <div class="solutions-image">
+                <img src="ImageWebsite/Data Solutions.png" alt="Data Solutions">
+            </div>
+            <div class="solutions-content">
+                <h2>Radically new data solutions</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <a href="#" class="learn-more-btn">Learn more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-header">
+                <h2>Glad to help your success</h2>
+            </div>
+            <div class="blog-cards">
+                <div class="blog-card">
+                    <p class="blog-date">22 June 2020</p>
+                    <h3>Sed ut perspiciatis unde omnis at vero blanditiis</h3>
+                    <p class="blog-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti...</p>
+                    <div class="blog-tags">
+                        <a href="#" class="blog-tag">Proxy</a>
+                        <a href="#" class="blog-tag">VPN</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <p class="blog-date">22 June 2020</p>
+                    <h3>Sed ut perspiciatis unde omnis at vero blanditiis</h3>
+                    <p class="blog-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti...</p>
+                    <div class="blog-tags">
+                        <a href="#" class="blog-tag">Proxy</a>
+                        <a href="#" class="blog-tag">VPN</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <p class="blog-date">22 June 2020</p>
+                    <h3>Sed ut perspiciatis unde omnis at vero blanditiis</h3>
+                    <p class="blog-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti...</p>
+                    <div class="blog-tags">
+                        <a href="#" class="blog-tag">Proxy</a>
+                        <a href="#" class="blog-tag">VPN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-button">
+                <a href="#" class="learn-more-btn">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Trusted by the best in the business</h2>
+                <div class="testimonial-navigation">
+                    <button class="nav-button prev-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="#292D33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="nav-button next-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L15 12L9 18" stroke="#292D33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="ImageWebsite/Mr_Alex Bern.png" alt="Alex Bern">
+                        </div>
+                        <div class="author-info">
+                            <h4>Alex Bern</h4>
+                            <p>CEO by PixelPerfect</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="ImageWebsite/Mr_Alex2.png" alt="Alex Bern">
+                        </div>
+                        <div class="author-info">
+                            <h4>Alex Bern</h4>
+                            <p>CEO by NOX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h2>1830+</h2>
+                    <p>Project executed</p>
+                </div>
+                <div class="stat-item">
+                    <h2>220</h2>
+                    <p>Data analytics</p>
+                </div>
+                <div class="stat-item">
+                    <h2>390</h2>
+                    <p>Data management</p>
+                </div>
+                <div class="stat-item">
+                    <h2>834+</h2>
+                    <p>Satisfied customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Left questions? Contacts us now for a free consultation and free trial!</h2>
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
+                
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Email address</span>
+                        <span class="detail-value">ensome@info.co.us</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Phone number</span>
+                        <span class="detail-value">+1601-201-5580</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Address</span>
+                        <span class="detail-value">1642 Washington Avenue, Jackson, MS, Mississippi, 39201</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h3>Contact Us</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Andrea">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="andrea@gmail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="theme">Theme</label>
+                        <input type="text" id="theme" placeholder="Job">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <input type="text" id="message" placeholder="Your message">
+                    </div>
+                    
+                    <button type="submit" class="send-button">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="container newsletter-container">
+        <div class="newsletter-content">
+            <h2>Subscribe to our newsletter</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+        <div class="newsletter-form">
+            <form>
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+    
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <!-- Top Footer with Logo and Navigation -->
+        <div class="footer-top">
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <img src="ImageWebsite/Logov3.png" alt="Ensome Logo" style="width: 150px; height: auto;">
+                </a>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Our team</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h4>Service</h4>
+                    <ul>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Elements</a></li>
+                        <li><a href="#">Site map</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="footer-divider">
+        
+        <!-- Middle Footer with Contacts and Social -->
+        <div class="footer-middle">
+            <div class="contact-info">
+                <h4>Contacts</h4>
+                <p><a href="tel:+16012015580">+1 601-201-5580</a></p>
+                <p><a href="mailto:ensome@info.co.us" class="with-arrow">ensome@info.co.us</a></p>
+                <p><a href="#" class="with-arrow">Driving directions</a></p>
+                <p>1642 Washington Avenue, Jackson, MS, 39201</p>
+            </div>
+            
+            <div class="social-links">
+                <h4>Social</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-icon behance"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="footer-divider">
+        
+        <!-- Bottom Footer with Privacy and Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#" class="with-arrow">Privacy policy</a>
+                <a href="#" class="with-arrow">Terms of us</a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2022 Ensome. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const nav = document.querySelector('nav');
+
+        mobileMenuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
